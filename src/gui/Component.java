@@ -4,13 +4,19 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 
 public class Component {
-	void draw(Graphics g) {
+	public final void paint(Graphics g) {
 		for(Component c : children) {
-			c.draw(g);
+			c.paint(g);
 		}
+		
+		draw(g);
 	}
 	
-	void add(Component e) {
+	public void draw(Graphics g) {
+		
+	}
+	
+	public void add(Component e) {
 		children.add(e);
 	}
 	
