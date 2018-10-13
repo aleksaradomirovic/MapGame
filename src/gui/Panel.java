@@ -15,11 +15,12 @@ public class Panel extends Component {
 	}
 	
 	public void setColor(Color e) {
-		
+		background = e;
 	}
 	
 	@Override
 	public void draw(Graphics g) {
+		g.setColor(background);
 		g.fillRect(x, y, w, h);
 	}
 }
